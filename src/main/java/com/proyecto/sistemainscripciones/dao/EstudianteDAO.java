@@ -23,6 +23,7 @@ public class EstudianteDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al insertar estudiante: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }
@@ -48,6 +49,7 @@ public class EstudianteDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al listar estudiantes: " + e.getMessage());
+            e.printStackTrace();
         }
 
         return lista;
@@ -76,6 +78,7 @@ public class EstudianteDAO {
 
         } catch (SQLException ex) {
             System.out.println("Error al buscar estudiante: " + ex.getMessage());
+            ex.printStackTrace();
         }
 
         return e;
@@ -98,6 +101,7 @@ public class EstudianteDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al actualizar estudiante: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }
@@ -113,6 +117,7 @@ public class EstudianteDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al eliminar estudiante: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }

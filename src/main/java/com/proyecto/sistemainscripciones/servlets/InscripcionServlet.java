@@ -34,7 +34,7 @@ public class InscripcionServlet extends HttpServlet {
         } else if (accion.equals("eliminar")) {
             int id = Integer.parseInt(request.getParameter("id"));
             inscripcionServicio.eliminarInscripcion(id);
-            response.sendRedirect("inscripcion?accion=listar");
+            response.sendRedirect(request.getContextPath() + "/inscripcion?accion=listar");
         }
     }
 
@@ -56,6 +56,6 @@ public class InscripcionServlet extends HttpServlet {
         String mensaje = inscripcionServicio.guardarInscripcion(inscripcion);
 
         request.getSession().setAttribute("mensaje", mensaje);
-        response.sendRedirect("inscripcion?accion=listar");
+        response.sendRedirect(request.getContextPath() + "/inscripcion?accion=listar");
     }
 }

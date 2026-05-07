@@ -34,7 +34,7 @@ public class EstudianteServlet extends HttpServlet {
         } else if (accion.equals("eliminar")) {
             int id = Integer.parseInt(request.getParameter("id"));
             estudianteServicio.eliminarEstudiante(id);
-            response.sendRedirect("estudiante?accion=listar");
+            response.sendRedirect(request.getContextPath() + "/estudiante?accion=listar");
         }
     }
 
@@ -66,6 +66,6 @@ public class EstudianteServlet extends HttpServlet {
         }
 
         request.getSession().setAttribute("mensaje", mensaje);
-        response.sendRedirect("estudiante?accion=listar");
+        response.sendRedirect(request.getContextPath() + "/estudiante?accion=listar");
     }
 }

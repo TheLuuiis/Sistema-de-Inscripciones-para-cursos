@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Listado de Inscripciones</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilos.css">
 </head>
 <body>
     <div class="contenedor">
@@ -52,7 +52,7 @@
                 <td><%= i.getEstado() %></td>
                 <td><%= i.getObservacion() %></td>
                 <td>
-                    <a href="../inscripcion?accion=eliminar&id=<%= i.getId() %>"
+                    <a href="${pageContext.request.contextPath}/inscripcion?accion=eliminar&id=<%= i.getId() %>"
                        onclick="return confirm('¿Desea eliminar esta inscripción?')">Eliminar</a>
                 </td>
             </tr>
