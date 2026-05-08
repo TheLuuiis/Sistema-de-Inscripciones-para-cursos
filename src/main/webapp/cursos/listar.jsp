@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Listado de Cursos</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilos.css">
 </head>
 <body>
     <div class="contenedor">
@@ -52,9 +52,9 @@
                 <td><%= c.getFechaInicio() %></td>
                 <td><%= c.getEstado() %></td>
                 <td>
-                    <a href="../curso?accion=editar&id=<%= c.getId() %>">Editar</a>
+                    <a href="${pageContext.request.contextPath}/curso?accion=editar&id=<%= c.getId() %>">Editar</a>
                     |
-                    <a href="../curso?accion=eliminar&id=<%= c.getId() %>"
+                    <a href="${pageContext.request.contextPath}/curso?accion=eliminar&id=<%= c.getId() %>"
                        onclick="return confirm('¿Desea eliminar este curso?')">Eliminar</a>
                 </td>
             </tr>

@@ -23,6 +23,7 @@ public class CursoDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al insertar curso: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }
@@ -48,6 +49,7 @@ public class CursoDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al listar cursos: " + e.getMessage());
+            e.printStackTrace();
         }
 
         return lista;
@@ -76,6 +78,7 @@ public class CursoDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al buscar curso: " + e.getMessage());
+            e.printStackTrace();
         }
 
         return c;
@@ -98,6 +101,7 @@ public class CursoDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al actualizar curso: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }
@@ -113,6 +117,7 @@ public class CursoDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al eliminar curso: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }

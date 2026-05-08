@@ -22,6 +22,7 @@ public class InscripcionDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al insertar inscripción: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }
@@ -47,6 +48,7 @@ public class InscripcionDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al listar inscripciones: " + e.getMessage());
+            e.printStackTrace();
         }
 
         return lista;
@@ -75,6 +77,7 @@ public class InscripcionDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al buscar inscripción: " + e.getMessage());
+            e.printStackTrace();
         }
 
         return i;
@@ -93,6 +96,7 @@ public class InscripcionDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al actualizar estado de inscripción: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }
@@ -108,6 +112,7 @@ public class InscripcionDAO {
 
         } catch (SQLException e) {
             System.out.println("Error al eliminar inscripción: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }
