@@ -1,0 +1,107 @@
+# Sistema de Inscripción a Cursos o Talleres
+
+## Nombre: Luis David Gil Cabarcas
+## Programación orientada a objetos - CARMEN RUBIO 23022026_C12_202631 -
+
+## Descripción
+Este proyecto consiste en un sistema web desarrollado en **Java** para gestionar la inscripción de estudiantes a cursos o talleres. La aplicación permite administrar cursos, estudiantes e inscripciones mediante una interfaz web conectada a la lógica del sistema a través de **Apache Tomcat**, utilizando **MySQL** como base de datos.
+
+## Objetivo
+El objetivo del sistema es facilitar la gestión académica básica, permitiendo registrar, consultar, actualizar y eliminar información relacionada con cursos, estudiantes e inscripciones, cumpliendo con los requisitos de Programación Orientada a Objetos y CRUD solicitados en la actividad.
+
+### Acceso a la base de datos
+Configurar los datos de conexión en el proyecto con los siguientes valores:
+
+- **Host:** `localhost`
+- **Puerto:** `3306`
+- **Base de datos:** `sistema_inscripciones`
+- **Usuario:** `root`
+- **Contraseña:** `admin`
+
+### Tomcat
+Usuario: admin
+contraseña: 123456
+
+## Funcionalidades implementadas
+
+### Cursos
+- Crear nuevos cursos
+- Listar cursos registrados
+- Editar información de un curso
+- Eliminar cursos
+
+### Estudiantes
+- Registrar estudiantes
+- Listar estudiantes
+- Editar datos de estudiantes
+- Eliminar estudiantes
+
+### Inscripciones
+- Registrar inscripciones de estudiantes en cursos
+- Listar inscripciones realizadas
+- Cancelar o eliminar inscripciones
+
+## Tecnologías utilizadas
+- **Java**
+- **HTML**
+- **CSS**
+- **Apache Tomcat**
+- **MySQL**
+- **MySQL Connector/J**
+
+## Programación Orientada a Objetos
+En el desarrollo del proyecto se aplicaron los principios fundamentales de la POO:
+
+- **Abstracción:** mediante clases como `Curso`, `Estudiante` e `Inscripcion`
+- **Encapsulamiento:** uso de atributos privados con métodos getter y setter
+- **Herencia:** implementación de una relación base como `Persona` y derivada como `Estudiante`
+- **Polimorfismo:** aplicación de métodos sobreescritos o sobrecargados dentro del sistema
+
+Las clases incluyen atributos, constructores y métodos de acuerdo con lo solicitado.
+
+## Estructura del proyecto
+El proyecto está organizado por paquetes para mantener una estructura clara y ordenada, separando modelos, acceso a datos, lógica de negocio, servlets y utilidades.
+
+## Base de datos
+La aplicación utiliza una base de datos en **MySQL** con tablas para:
+
+- `cursos`
+- `estudiantes`
+- `inscripciones`
+
+La conexión se realiza mediante **MySQL Connector**, permitiendo que la aplicación interactúe correctamente con la base de datos.
+
+## Interfaz gráfica
+La interfaz fue desarrollada en **HTML y CSS**, conectada a Java mediante **Servlets** ejecutados en **Apache Tomcat**.  
+El sistema no funciona solo como maqueta visual, sino como una aplicación funcional con operaciones reales sobre los datos.
+
+## Validaciones
+Se contemplan validaciones necesarias para garantizar integridad en los datos, como campos obligatorios, tipos de datos correctos y control de procesos de inscripción.
+
+## Requisitos para la ejecución
+Para ejecutar el proyecto se requiere:
+
+- **Java JDK**
+- **Apache Tomcat**
+- **MySQL Server**
+- **MySQL Connector/J**
+- Un IDE como **NetBeans** o **IntelliJ IDEA**
+
+## Ejecución del proyecto
+1. Crear la base de datos en MySQL.
+2. Importar el script SQL con las tablas necesarias.
+3. Configurar la conexión a la base de datos en el proyecto.
+4. Agregar la librería **MySQL Connector/J**.
+5. Desplegar el proyecto en **Apache Tomcat**.
+6. Ejecutar y acceder desde el navegador.
+
+## Cumplimiento de la actividad
+Este proyecto cumple con los requisitos establecidos en la actividad, ya que integra:
+
+- Interfaz web funcional en HTML
+- Conexión con Java mediante Tomcat
+- Base de datos MySQL operativa
+- CRUD completo para cursos, estudiantes e inscripciones
+- Aplicación de los pilares de la Programación Orientada a Objetos
+- Organización del proyecto por paquetes
+- Uso de estructuras dinámicas dentro de la lógica del sistema
