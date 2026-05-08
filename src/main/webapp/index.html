@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Inscripción a Cursos</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <div class="contenedor">
-        <h1>Sistema de Inscripción a Cursos o Talleres</h1>
-        <p>Bienvenido al sistema de gestión académica.</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de Inscripción a Cursos</title>
 
-        <div class="menu">
-            <a href="estudiante?accion=listar">Estudiantes</a>
-            <a href="curso?accion=listar">Cursos</a>
-            <a href="inscripcion?accion=listar">Inscripciones</a>
-        </div>
-    </div>
-</body>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <div class="bg-blur blur-1"></div>
+        <div class="bg-blur blur-2"></div>
+        <div class="bg-blur blur-3"></div>
+
+       <main class="hero">
+            <section class="contenedor">
+                <span class="badge">Gestión académica</span>
+                <h1>Sistema de Inscripción a Cursos o Talleres</h1>
+                <p>
+                    Administra estudiantes, cursos e inscripciones desde una interfaz
+                    clara, moderna y organizada.
+                </p>
+                <div class="menu">
+                    <a href="estudiante?accion=listar" class="btn btn-principal">Estudiantes</a>
+                    <a href="curso?accion=listar" class="btn btn-secundario">Cursos</a>
+                    <a href="inscripcion?accion=listar" class="btn btn-secundario">Inscripciones</a>
+                </div>
+            </section>
+       </main>
+    </body>
 </html>

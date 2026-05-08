@@ -7,56 +7,75 @@
 %>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nueva Inscripción</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/formularios.css">
 </head>
 <body>
     <div class="contenedor">
         <h1>Nueva Inscripción</h1>
+        <p class="subtitulo">
+            Selecciona el estudiante, el curso y completa la información de la inscripción.
+        </p>
 
         <form action="${pageContext.request.contextPath}/inscripcion" method="post">
-            <label>Estudiante:</label><br>
-            <select name="idEstudiante" required>
-                <option value="">Seleccione</option>
-                <%
-                    if (mapaEstudiantes != null) {
-                        for (Map.Entry<Integer, String> entry : mapaEstudiantes.entrySet()) {
-                %>
-                    <option value="<%= entry.getKey() %>"><%= entry.getValue() %></option>
-                <%
-                        }
-                    }
-                %>
-            </select><br><br>
+            <div class="fila">
+                <div class="grupo-form">
+                    <label for="idEstudiante">Estudiante</label>
+                    <select name="idEstudiante" id="idEstudiante" required>
+                        <option value="">Seleccione</option>
+                        <%
+                            if (mapaEstudiantes != null) {
+                                for (Map.Entry<Integer, String> entry : mapaEstudiantes.entrySet()) {
+                        %>
+                            <option value="<%= entry.getKey() %>"><%= entry.getValue() %></option>
+                        <%
+                                }
+                            }
+                        %>
+                    </select>
+                </div>
 
-            <label>Curso:</label><br>
-            <select name="idCurso" required>
-                <option value="">Seleccione</option>
-                <%
-                    if (mapaCursos != null) {
-                        for (Map.Entry<Integer, String> entry : mapaCursos.entrySet()) {
-                %>
-                    <option value="<%= entry.getKey() %>"><%= entry.getValue() %></option>
-                <%
-                        }
-                    }
-                %>
-            </select><br><br>
+                <div class="grupo-form">
+                    <label for="idCurso">Curso</label>
+                    <select name="idCurso" id="idCurso" required>
+                        <option value="">Seleccione</option>
+                        <%
+                            if (mapaCursos != null) {
+                                for (Map.Entry<Integer, String> entry : mapaCursos.entrySet()) {
+                        %>
+                            <option value="<%= entry.getKey() %>"><%= entry.getValue() %></option>
+                        <%
+                                }
+                            }
+                        %>
+                    </select>
+                </div>
+            </div>
 
-            <label>Estado:</label><br>
-            <select name="estado" required>
-                <option value="ACTIVA">ACTIVA</option>
-                <option value="CANCELADA">CANCELADA</option>
-            </select><br><br>
+            <div class="grupo-form">
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado" required>
+                    <option value="ACTIVA">ACTIVA</option>
+                    <option value="CANCELADA">CANCELADA</option>
+                </select>
+            </div>
 
-            <label>Observación:</label><br>
-            <input type="text" name="observacion"><br><br>
+            <div class="grupo-form">
+                <label for="observacion">Observación</label>
+                <input type="text" id="observacion" name="observacion" placeholder="Escribe una observación si aplica">
+            </div>
 
-            <button type="submit">Guardar</button>
-            <a href="${pageContext.request.contextPath}/inscripcion?accion=listar">Cancelar</a>
+            <div class="acciones">
+                <button type="submit" class="btn btn-guardar">Guardar</button>
+                <a href="${pageContext.request.contextPath}/inscripcion?accion=listar" class="btn btn-cancelar">Cancelar</a>
+            </div>
         </form>
     </div>
 </body>
